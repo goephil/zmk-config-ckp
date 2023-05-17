@@ -17,12 +17,6 @@
             #sensor-binding-cells = <0>;
             bindings = <&bl BL_INC>, <&bl BL_DEC>;
         };
-		disp_encoder: disp_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "DISP_ENCODER";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_BRI_INC>, <&kp C_BRI_DEC>;
-        };
     };
 	keymap {
 		compatible = "zmk,keymap";
@@ -50,13 +44,13 @@
 		};
 		lower {
 			bindings = <
-				&bt BT_CLR &bt BT_PRV &bt BT_NXT &trans &trans &trans &out OUT_TOG &trans &trans  &trans   &trans  &trans &trans &trans &trans
+				&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &out OUT_TOG &trans &trans  &trans   &trans  &trans &trans &trans &trans
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &trans
 				&trans    &trans &trans &trans &trans &trans &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans  &trans &sys_reset  &bootloader &trans
 				&trans &trans &trans &trans &trans &trans &bl BL_TOG &bl BL_DEC &bl BL_INC &trans &trans &trans &trans &trans &trans
 				&trans &trans  &trans             &trans                          &trans  &trans   &trans &trans &trans &trans
 			>;
-			sensor-bindings = <&disp_encoder &inc_dec_kp PG_DN PG_UP>;
+			sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC &inc_dec_kp PG_DN PG_UP>;
 		};
 	};
 };
