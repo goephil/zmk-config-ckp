@@ -3,7 +3,7 @@
   "pw-kbid": "bt65v1_iso",
   "keymap": "default",
   "layout": "LAYOUT",
-  "layer_names": ["base", "raise", "lower"],
+  "layer_names": ["base", "raise", "deep"],
   "layers": [
     [
       "&kp ESC",
