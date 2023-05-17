@@ -14,6 +14,12 @@
             #sensor-binding-cells = <0>;
             bindings = <&bl BL_INC>, <&bl BL_DEC>;
         };
+		disp_encoder: disp_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "DISP_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_BRI_INC>, <&kp C_BRI_DEC>;
+        };
     };
 	keymap {
 		compatible = "zmk,keymap";
@@ -47,7 +53,7 @@
 				&trans &trans &trans &trans &trans &trans &bl BL_TOG &bl BL_DEC &bl BL_INC &trans &trans &trans &trans &trans &trans
 				&trans &trans  &trans             &trans                          &trans  &trans   &trans &trans &trans &trans
 			>;
-			sensor-bindings = <&bl_encoder &inc_dec_kp PG_DN PG_UP>;
+			sensor-bindings = <&disp_encoder &inc_dec_kp PG_DN PG_UP>;
 		};
 	};
 };
