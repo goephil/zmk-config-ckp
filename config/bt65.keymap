@@ -7,7 +7,7 @@
 
 #define default_layer 0
 #define raise 1
-#define deep 2
+#define lower 2
 
 / {
 	behaviors {
@@ -42,12 +42,12 @@
 			>;
 			sensor-bindings = <&bl_encoder &inc_dec_kp PG_DN PG_UP>;
 		};
-		deep {
+		lower {
 			bindings = <
 				&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans &trans &trans &trans
-				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &kp C_VOL_UP
-				&trans    &trans &trans &trans &trans &trans &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans  &trans &sys_reset  &bootloader &kp C_VOL_DN
-				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp PG_UP &kp HOME
+				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &trans
+				&trans    &trans &trans &trans &trans &trans &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans  &trans &sys_reset  &bootloader &trans
+				&trans &trans &trans &trans &trans &trans &bl BL_TOG &bl BL_DEC &bl BL_INC &trans &trans &trans &trans &kp PG_UP &trans
 				&trans &trans  &kp C_PREV             &kp C_PP                           &kp C_NEXT   &trans   &trans &kp HOME &kp PG_DN &kp END
 			>;
 			sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC &inc_dec_kp PG_DN PG_UP>;
