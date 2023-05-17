@@ -50,7 +50,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp PG_UP &kp HOME
 				&trans &trans  &kp C_PREV             &kp C_PP                           &kp C_NEXT   &trans   &trans &kp HOME &kp PG_DN &kp END
 			>;
-			sensor-bindings = <&bl_encoder &inc_dec_kp PG_DN PG_UP>;
+			sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC &inc_dec_kp PG_DN PG_UP>;
 		};
 	};
 };
