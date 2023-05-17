@@ -5,6 +5,9 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+#define default_layer 0
+#define raise 1
+#define lower 2
 
 / {
 	behaviors {
